@@ -1,35 +1,51 @@
+@use '../../assets/scss/functions.scss' as *;
+
 .flex-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.8rem;
+
+    @include breakpoint('sm') {
+        grid-template-columns: 0.3fr 0.7fr;
+        column-gap: 0.8rem;
+    }
 }
 
 .patient-form {
     background: #fff;
     border-radius: 0.4rem;
-    width: 30%;
     padding: 0.8rem;
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap;
+    h4 {
+        font-size: 1.0rem;
+        font-weight: 400;
+        margin: 0.4rem 0;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+
+    hr {
+        border: 1px solid rgba(#000501, 0.1);
+        margin: 0.8rem 0;
+    }
 }
 
 app-patients {
     background: #fff;
-    width: 65%;
     border-radius: 0.4rem;
 }
 
 .input-group {
-    width: 100%;
+    box-sizing: border-box;
     margin: 0;
+    width: 100%;
+    display: flex;
     button, textarea, select, input {
         padding: 0.8rem 1.2rem;
         border: 1px solid #000501;
         border-radius: 0.2rem;
-        width: 100%;
         margin: 0.2rem 0;
         box-sizing: content-box;
+        width: 100%;
     }
 
     button {

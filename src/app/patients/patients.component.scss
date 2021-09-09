@@ -5,13 +5,15 @@
 
     table {
         font-size: 0.8rem;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         border-spacing: 0;
         border-collapse: collapse;
+        border: 1px solid #99d19c;
         thead {
             font-weight: 400;
-            background: #99d19c;
+            background: #73ab84;
+            border-radius: 0.8rem;
             th {
                 padding: 0.8rem 0.4rem;
             }

@@ -30,9 +30,10 @@ export class RegisterPatientComponent implements OnInit {
 
   createPatient() {
     if (this.patientForm.valid) {
-      this.service.createPatient(this.patientForm.value).subscribe(response => {
-        console.log(response);
-      });
+      console.table(this.patientForm.value);
+      // this.service.createPatient(this.patientForm.value).subscribe(response => {
+      //   console.log(response);
+      // });
     } else {
       //
     }

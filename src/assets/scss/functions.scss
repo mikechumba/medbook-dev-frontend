@@ -1,0 +1,20 @@
+@use "sass:math" as math;
+
+$breakpoints: (
+    'sm': 43em,
+    'md': 62em,
+    'lg': 82em
+);
+
+
+// Mixins
+@mixin breakpoint($size, ) {
+    @media (min-width: map-get($breakpoints, $key: $size)) {
+        @content
+    }
+}
+
+// Functions
+@function toRem($pixels, $context: 16) {
+    @return math.div($pixels, $context) * 1rem;  
+}

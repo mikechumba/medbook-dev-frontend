@@ -2,6 +2,7 @@
 
 
 body {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -10,9 +11,6 @@ body {
 
 main {
     margin: 2.4rem 0;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
 }
 
 .container {

@@ -1,23 +1,45 @@
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
 .patient-form {
     background: #fff;
     border-radius: 0.4rem;
-    width: 100%;
+    width: 30%;
     padding: 0.8rem;
     display: flex;
     align-items: center;
     flex-flow: column wrap;
 }
 
+app-patients {
+    background: #fff;
+    width: 65%;
+    border-radius: 0.4rem;
+}
+
 .input-group {
     width: 100%;
     margin: 0;
-    textarea, select, input {
+    button, textarea, select, input {
         padding: 0.8rem 1.2rem;
         border: 1px solid #000501;
         border-radius: 0.2rem;
         width: 100%;
         margin: 0.2rem 0;
+        box-sizing: content-box;
+    }
 
+    button {
+        cursor: pointer;
+        background: #73ab84;
+        border: none;
+        &:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            background: #79c7c5;
+        }
     }
 
 }

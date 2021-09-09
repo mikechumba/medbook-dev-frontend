@@ -10,12 +10,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Andrew Kigen</td>
-                <td>1996-05-03</td>
-                <td>Male</td>
-                <td>Outpatient</td>
-                <td>He's alright</td>
+            <tr *ngFor="let patient of patients">
+                <td>{{ patient.name }}</td>
+                <td>{{ patient.date_of_birth | date:"dd/MM/yyyy" }}</td>
+                <td>{{ patient.gender_id }}</td>
+                <td>{{ patient.service_id }}</td>
+                <td>{{ patient.general_comments }}</td>
             </tr>
         </tbody>
     </table>

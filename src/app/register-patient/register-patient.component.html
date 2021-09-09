@@ -1,33 +1,36 @@
-<section class="patient-form">
+<div class="flex-container">
+    <section class="patient-form">
 
-    <h4>Register Patient</h4>
-
-    <hr>
-    <form action="">
-        <div class="input-group">
-            <input id="name" type="text" placeholder="Enter Name">
-        </div>
-        <div class="input-group">
-            <label for="name" class="sr-only">Date of Birth</label>
-            <input id="date_of_birth" type="date" placeholder="Enter Date of Birth">
-        </div>
-        <div class="input-group">
-            <select name="" id="">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <select name="" id="">
-                <option value="outpatient">Outpatient</option>
-                <option value="inpatient">Inpatient</option>
-            </select>
-        </div>
-        <div class="input-group">
-            <textarea name="" id="" placeholder="General Comments"></textarea>
-        </div>
-        <div class="input-group">
-            <button type="submit">Register Patient</button>
-        </div>
-    </form>
-</section>
+        <h4>Register Patient</h4>
+        <form [formGroup]="patientForm">
+            <div class="input-group">
+                <input formControlName="name" id="name" type="text" placeholder="Enter Name">
+            </div>
+            <div class="input-group">
+                <input formControlName="date_of_birth" id="date_of_birth" type="date" placeholder="Enter Date of Birth">
+            </div>
+            <div class="input-group">
+                <select formControlName="gender_id" name="" id="">
+                    <option value="" selected>Select Gender</option>
+                    <option [value]="1">Male</option>
+                    <option [value]="2">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <select formControlName="service_id" name="" id="">
+                    <option value="" selected>Select Service</option>
+                    <option [value]="1">Outpatient</option>
+                    <option [value]="2">Inpatient</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <textarea formControlName="general_comments" id="" placeholder="General Comments"></textarea>
+            </div>
+            <div class="input-group">
+                <button type="submit" (click)="createPatient()">Register Patient</button>
+            </div>
+        </form>
+    </section>
+    
+    <app-patients [patients]="patients"></app-patients>
+</div>

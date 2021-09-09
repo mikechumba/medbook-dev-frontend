@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: rgba(#333, 0.1);
+}
+
+main {
+    margin: 2.4rem 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 1.2rem 1.6rem;
+}
+
+.sr-only {
+    visibility: hidden;
+}

@@ -1,0 +1,28 @@
+.table-container {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0 auto;
+
+    table {
+        font-size: 0.8rem;
+        width: 95%;
+        margin: 0 auto;
+        border-spacing: 0;
+       
+        thead {
+            font-weight: 400;
+            background: #99d19c;
+            th {
+                padding: 0.8rem 0.4rem;
+            }
+        }
+
+        tbody {
+            text-align: center;
+            td {
+                padding: 0.8rem 0.4rem;
+                white-space: pre-line;
+            }
+        }
+    }
+}

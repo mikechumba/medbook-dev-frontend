@@ -1,0 +1,24 @@
+.patient-form {
+    background: #fff;
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+}
+
+.input-group {
+    width: 100%;
+    margin: 0;
+    textarea, select, input {
+        padding: 0.8rem 1.2rem;
+        border: 1px solid #000501;
+        border-radius: 0.2rem;
+        width: 100%;
+        margin: 0.2rem 0;
+
+    }
+
+}
+

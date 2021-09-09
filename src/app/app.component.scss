@@ -1,0 +1,20 @@
+nav {
+    .logo {
+        color: #73AB84;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}
+
+app-register-patient, app-patients {
+    background: #fff;
+    border-radius: 0.4rem;
+}
+
+app-register-patient {
+    width: 38%;
+};
+
+app-patients {
+    width: 58%;
+}

@@ -10,6 +10,11 @@ import { PatientServiceService } from '../patient-service.service';
 })
 export class RegisterPatientComponent implements OnInit {
 
+  alert = {
+    status: '',
+    message: ''
+  }
+
   patients: Patient[] = [];
 
   patientForm = this.fb.group({
@@ -23,6 +28,10 @@ export class RegisterPatientComponent implements OnInit {
   constructor(private service: PatientServiceService, public fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.getPatients();
+  }
+
+  getPatients() {
     this.service.getPatients().subscribe(patients => {
       this.patients = patients;
     });
@@ -31,12 +40,28 @@ export class RegisterPatientComponent implements OnInit {
   createPatient() {
     if (this.patientForm.valid) {
       console.table(this.patientForm.value);
-      // this.service.createPatient(this.patientForm.value).subscribe(response => {
-      //   console.log(response);
-      // });
+      this.service.createPatient(this.patientForm.value).subscribe(response => {
+        console.log(response);
+        this.alert = {
+          status: 'success',
+          message: 'Patient created successfully'
+        };
+        this.patientForm.reset();
+        this.getPatients();
+      });
     } else {
-      //
+      this.alert = {
+        status: 'error',
+        message: 'Please ensure you fill out each input field'
+      };
     }
+
+    setTimeout(() => {
+      this.alert = {
+        status: '',
+        message: ''
+      }
+    }, 3500);
   }
 
 }

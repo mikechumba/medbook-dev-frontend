@@ -15,4 +15,14 @@ export class PatientsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  get occurences() {
+    const elementMap = this.patients.map(patient => `${patient.name}_${patient.date_of_birth}`);
+    const occurences: any = {};
+    elementMap.forEach((element) => {
+      occurences[element] = occurences[element] ? (occurences[element] + 1) : 1; 
+    });
+
+    return occurences;
+  }
 }

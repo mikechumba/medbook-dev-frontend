@@ -1,20 +1,36 @@
+@use '../../assets/scss/functions.scss' as *;
+
 .table-container {
     width: 100%;
     padding: 0.8rem;
     margin: 0 auto;
+    overflow-y: scroll;
+
+    h4 {
+        font-size: 1.0rem;
+        font-weight: 400;
+        margin: 0.4rem 0;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+
+    hr {
+        border: 1px solid rgba(#000501, 0.1);
+        margin: 0.8rem 0;
+    }
 
     table {
         font-size: 0.8rem;
         width: 100%;
         margin: 0 auto;
         border-spacing: 0;
-        border-collapse: collapse;
-        border: 1px solid #99d19c;
+        box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+        border-radius: 0.4rem;
+        overflow: hidden;
         thead {
             font-weight: 400;
-            background: #73ab84;
-            border-radius: 0.8rem;
             th {
+                background: #73ab84;
                 padding: 0.8rem 0.4rem;
             }
         }
@@ -28,3 +44,21 @@
         }
     }
 }
+
+.highlight {
+    background: #99d19c;
+}
+
+.table-legend {
+    font-size: toRem(12);
+    margin: 1.2rem 0;
+    display: flex;
+}
+
+.square {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #99d19c;
+    margin-right: 0.4rem;    
+}
+    

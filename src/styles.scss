@@ -29,3 +29,25 @@ main {
 .w-full {
     width: 100%;
 }
+
+.alert {
+    
+    font-size: toRem(14);
+    padding: 0.8rem;
+    border-radius: 0.4rem;
+    margin: 0.8rem 0;
+    &-danger {
+        border: 1px solid #EF4444;
+        background: rgba(#EF4444, 0.2);
+        color: #B91C1C;
+    }
+    &-success {
+        border: 1px solid #10B981;
+        background: rgba(#10B981, 0.2);
+        color: #047857;
+    }
+ }
+
+ .title-case {
+    text-transform: capitalize;
+ }

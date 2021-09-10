@@ -9,12 +9,7 @@
         grid-template-columns: 0.3fr 0.7fr;
         column-gap: 0.8rem;
     }
-}
 
-.patient-form {
-    background: #fff;
-    border-radius: 0.4rem;
-    padding: 0.8rem;
     h4 {
         font-size: 1.0rem;
         font-weight: 400;
@@ -29,9 +24,17 @@
     }
 }
 
+.patient-form {
+    background: #fff;
+    border-radius: 0.4rem;
+    padding: 0.8rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
 app-patients {
     background: #fff;
     border-radius: 0.4rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .input-group {
@@ -46,6 +49,7 @@ app-patients {
         margin: 0.2rem 0;
         box-sizing: content-box;
         width: 100%;
+        font-size: toRem(14);
     }
 
     button {

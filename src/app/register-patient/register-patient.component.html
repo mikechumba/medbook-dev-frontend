@@ -3,6 +3,14 @@
         <h4>Register Patient</h4>
 
         <hr>
+
+        <div 
+            *ngIf="alert.message"
+            class="alert"
+            [class.alert-success]="alert.status === 'success'"
+            [class.alert-danger]="alert.status === 'error'">
+            {{ alert.message }}
+        </div>
         <form [formGroup]="patientForm">
             <div class="input-group">
                 <input formControlName="name" id="name" type="text" placeholder="Enter Name">

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Patient } from 'src/models/interfaces';
+import { Patient, PatientPayload } from 'src/models/interfaces';
 import { PatientServiceService } from '../patient-service.service';
 
 @Component({
@@ -39,7 +39,6 @@ export class RegisterPatientComponent implements OnInit {
 
   createPatient() {
     if (this.patientForm.valid) {
-      console.table(this.patientForm.value);
       this.service.createPatient(this.patientForm.value).subscribe(response => {
         console.log(response);
         this.alert = {
@@ -48,6 +47,11 @@ export class RegisterPatientComponent implements OnInit {
         };
         this.patientForm.reset();
         this.getPatients();
+      }, err => {
+        this.alert = {
+          status: 'error',
+          message: 'Server Error'
+        };
       });
     } else {
       this.alert = {

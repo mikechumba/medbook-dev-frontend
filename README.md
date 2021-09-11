@@ -18,6 +18,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 - Connect your repository to netflify
 - Set the build command as `ng build`
+- Set the build directory to `dist/medbook-dev-frontend`
+- Publish
 
 ## Running unit tests
 
